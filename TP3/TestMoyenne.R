@@ -27,4 +27,19 @@ s = 0.35
 n = 100
 
 t = sqrt(n) * ((x - 2.5)/s)
-pt(t) ### TODO
+if(pt(t, df=99) > 0.05) {
+  print("Le médicament suive les spécifications")
+} else {
+  print("Le médicament ne suive pas les spécifications")
+}
+
+##################
+### Exercice 4 ###
+##################
+a = c(48.12, 48.24, 50.41, 53.59, 54.62, 56.38, 57.77, 58.65, 60.52)
+b = c(44.27, 46.31, 48.29, 48.47, 50.58, 51.23, 55.44)
+mean_b = mean(b)
+mean_b[1]
+if(t.test(a, mu=mean_b, alternative = "greater") > 0.05) {
+  print("La région A produit plus que B")
+}
