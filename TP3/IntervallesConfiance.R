@@ -21,7 +21,8 @@ qqnorm(jeu3); qqline(jeu3)
 ##################
 anonces = c(26, 33, 23, 30, 24, 36, 27, 29, 22, 28, 37, 31, 34, 28, 31,
             28, 35, 30, 33, 27, 32, 39, 28, 33, 32, 28, 31, 30, 11, 37)
-par(mfrow = c(1, 1))
+par(mfrow = c(1, 2))
+hist(anonces)
 qqnorm(anonces); qqline(anonces)
 mean(anonces); sd(anonces)
 t.test(anonces, conf.level = 0.95)$conf.int
